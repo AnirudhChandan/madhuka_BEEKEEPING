@@ -16,14 +16,35 @@
   <link rel="stylesheet" href="css/theme.min.css">
 
   <style>
-    @media (max-width: 576px) {
+    @media (min-width: 450px) {
+      .navbar-toggler {
+        display: none;
+      }
+
+      .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      .navbar-collapse.collapse.show {
+        height: auto !important;
+      }
+
+      .navbar-nav {
+        list-style: none;
+        display: flex;
+      }
+
+      .navbar-nav .nav-item {
+        margin-right: 15px;
+      }
+    }
+
+    @media (max-width: 450px) {
       .navbar-nav {
         display: flex;
         flex-direction: column;
-      }
-
-      .title {
-        margin-left: 0;
       }
     }
 
@@ -83,7 +104,7 @@
 
 <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
 
-  <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
+  <nav id="navScroll" class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
     <div class="container-fluid">
       <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="/index.html">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-stack"
@@ -96,36 +117,47 @@
         <span class="ms-md-1 mt-1 fw-bolder title me-md-5">madhūka NATURELLE</span>
       </a>
 
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal">
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="/pages/honeyProd.html" aria-label="Homepage">
-            Honey & Bee Products
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="/pages/beekeepingSupp.html" aria-label="A sample content page">
-            Beekeeping Supplies
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="/learn.html" aria-label="A sample content page">
-            Learn Beekeeping
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="/system.html" aria-label="A system message page">
-            Rescue Bees
-          </a>
-        </li>
-        <li>
-          <a href="https://amzn.eu/d/79ku1Fc" aria-label="Download this template" class="btn btn-outline-light"
-            target="_blank">
+      <div class="navbar-collapse collapse order-3 order-lg-0" id="navbarNav">
+        <ul class="navbar-nav mx-auto list-group list-group-horizontal">
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/pages/honeyProd.html" aria-label="Homepage">
+              Honey & Bee Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/pages/beekeepingSupp.html" aria-label="A sample content page">
+              Beekeeping Supplies
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/learn.html" aria-label="A sample content page">
+              Learn Beekeeping
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="/system.html" aria-label="A system message page">
+              Rescue Bees
+            </a>
+          </li>
+        </ul>
+        <div class="order-lg-2">
+          <a href="https://amzn.eu/d/79ku1Fc" aria-label="Download this template"
+            class="btn btn-outline-light d-lg-none" target="_blank">
             <small>Buy Now</small>
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
+
+
+      <button class="navbar-toggler d-lg-none order-lg-1" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">Navbar</span>
+      </button>
     </div>
   </nav>
+
+
+
 
   <main>
     <div class="w-100 overflow-hidden position-relative bg-black text-white" data-aos="fade">
