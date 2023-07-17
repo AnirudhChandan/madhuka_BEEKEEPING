@@ -46,8 +46,13 @@
       }
 
       .menu-bar ul {
-
         list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .menu-bar ul li {
+        padding: 10px;
       }
 
       .menu-bar ul li:hover .sub-menu-1 {
@@ -58,6 +63,10 @@
 
       .menu-bar ul li:hover .sub-menu-1 ul li {
         padding: 5px;
+      }
+
+      .sub-menu-1 ul {
+        display: block;
       }
 
     }
@@ -192,8 +201,8 @@
 
   <main>
 
-    <div class="menu-bar d-flex" style="background-color: chartreuse;">
-      <ul class="" style=" display: flex; justify-content: space-between;">
+    <div class="menu-bar" style="background-color: chartreuse;">
+      <ul class="">
         <li class="active"><a href="#">Hives</a>
           <div class="sub-menu-1">
             <ul>

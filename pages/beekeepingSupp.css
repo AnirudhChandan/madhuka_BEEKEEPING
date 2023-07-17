@@ -4,12 +4,6 @@
 }
 
 
-.dropdown:hover .dropdown-menu-dark {
-  display: block;
-  max-width: 0px;
-  padding: 0;
-  margin: 0;
-}
 
 .nav-item-text {
   display: flex;
