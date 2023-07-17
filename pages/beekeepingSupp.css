@@ -3,30 +3,6 @@
   padding: 0;
 }
 
-.name-title {
-  transition: transform 0.5s ease-in-out;
-}
-
-.name-title:hover {
-  transform: scale(1.2);
-  animation-name: fadeOut;
-  animation-duration: 1s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
-
-.dropdown-menu-dark {
-  display: none;
-  line-height: 2;
-  transition: opacity 1s ease-in-out;
-}
 
 .dropdown:hover .dropdown-menu-dark {
   display: block;
