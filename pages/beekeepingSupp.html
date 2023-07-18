@@ -15,6 +15,11 @@
   <title>Klar HTML Template - Frontpage one</title>
   <link rel="stylesheet" href="/css/theme.min.css">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+
   <style>
     @media (min-width: 450px) {
       .navbar-toggler {
@@ -43,6 +48,10 @@
 
       .sub-menu-1 {
         display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 2s, visibility 2s;
+        position: absolute;
       }
 
       .menu-bar ul {
@@ -53,12 +62,24 @@
 
       .menu-bar ul li {
         padding: 10px;
+        /* position: relative; */
+      }
+
+      .menu-bar ul li a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      .menu-bar ul li a:hover {
+        color: #808080;
       }
 
       .menu-bar ul li:hover .sub-menu-1 {
         display: block;
         margin-top: 15px;
-        background-color: blueviolet;
+        visibility: visible;
+        opacity: 1;
+        animation: fade 1s;
       }
 
       .menu-bar ul li:hover .sub-menu-1 ul li {
@@ -67,6 +88,24 @@
 
       .sub-menu-1 ul {
         display: block;
+      }
+
+      .sub-menu-1 ul li a {
+        text-decoration: none;
+      }
+
+      .sub-menu-1 ul li a:hover {
+        color: #808080;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
       }
 
     }
@@ -156,7 +195,7 @@
   <nav id="navScroll" class="navbar navbar-dark bg-black " tabindex="0">
     <div class="container-fluid">
       <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="/index.html">
-        <img src="/images/madhuka_NATURELLE_Logo_Transparent.png" style="width: 50%;">
+        <img src="/images/madhuka_NATURELLE_Logo_Transparent.png" style="width: 25%; height: 40%;">
       </a>
 
       <div class="navbar-collapse collapse order-3 order-lg-0 ul-list" id="navbarNav">
@@ -201,7 +240,7 @@
 
   <main>
 
-    <div class="menu-bar" style="background-color: chartreuse;">
+    <div class="menu-bar">
       <ul class="">
         <li class="active"><a href="#">Hives</a>
           <div class="sub-menu-1">
