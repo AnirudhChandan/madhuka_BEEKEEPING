@@ -36,14 +36,48 @@
     <link rel="manifest" href="/images/site.webmanifest" />
 
     <style>
-      main{
-        padding-left:45px ;
+      main {
+        padding-left: 45px;
       }
-      footer{
+      footer {
         width: 100%;
       }
       body {
         box-sizing: border-box;
+      }
+      @media (max-width: 450px) {
+        body {
+          width: 100%;
+        }
+        .navbar {
+          padding: 0 !important;
+        }
+        .footer-fix {
+          flex-direction: column;
+        }
+        .navlink-fix {
+          gap: 20px;
+          flex-direction: row !important;
+          justify-content: center;
+          padding-bottom: 20px;
+        }
+        .img-fix {
+          width: 110px;
+        }
+        .cont-fix {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .col-fix {
+          width: 80% !important;
+        }
+        .col-fix2 {
+          width: 60%;
+          margin-left: 0 !important;
+        }
+        .span-fix {
+          text-align: center;
+        }
       }
       @media (min-width: 450px) {
         .navbar-brand img {
@@ -175,7 +209,10 @@
           class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center"
           href="/index.html"
         >
-          <img src="/images/madhuka_NATURELLE_Logo_Transparent.png" />
+          <img
+            class="img-fix"
+            src="/images/madhuka_NATURELLE_Logo_Transparent.png"
+          />
         </a>
 
         <div
@@ -614,9 +651,9 @@
           style="background-image: url(img/webp/abstract12.webp)"
         >
           <div class="container bg-black px-vw-5 py-vh-3 rounded-5 shadow">
-            <div class="row d-flex align-items-center">
+            <div class="cont-fix row d-flex align-items-center">
               <div
-                class="col-6 d-flex align-items-center bg-dark shadow rounded-5 p-0"
+                class="col-fix col-6 d-flex align-items-center bg-dark shadow rounded-5 p-0"
                 data-aos="zoom-in-up"
               >
                 <div class="row d-flex justify-content-center">
@@ -630,7 +667,9 @@
                       loading="lazy"
                     />
                   </div>
-                  <div class="col-12 col-lg-10 col-xl-8 text-center my-5">
+                  <div
+                    class="col-fix col-12 col-lg-10 col-xl-8 text-center my-5"
+                  >
                     <p class="lead border-bottom pb-4 border-secondary">
                       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -643,7 +682,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-5 offset-1">
+              <div class="col-fix2 col-5 offset-1">
                 <span class="h5 text-secondary fw-lighter">The numbers</span>
                 <h2 class="display-huge fw-bolder" data-aos="zoom-in-left">
                   +400
@@ -978,7 +1017,7 @@
 
     <footer class="bg-black border-top border-dark">
       <div class="container py-vh-4 text-secondary fw-lighter">
-        <div class="row">
+        <div class="row footer-fix">
           <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
             <a
               class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center"
@@ -1005,8 +1044,8 @@
             </a>
           </div>
           <div class="col border-end border-dark">
-            <span class="h6">Company</span>
-            <ul class="nav flex-column">
+            <p class="span-fix h6">Company</span>
+            <ul class="nav navlink-fix flex-column">
               <li class="nav-item">
                 <a href="#" class="link-fancy link-fancy-light">About us</a>
               </li>
@@ -1023,8 +1062,8 @@
             </ul>
           </div>
           <div class="col border-end border-dark">
-            <span class="h6">Services</span>
-            <ul class="nav flex-column">
+            <p class="span-fix h6">Services</span>
+            <ul class="nav navlink-fix flex-column">
               <li class="nav-item">
                 <a href="#" class="link-fancy link-fancy-light">Pricing</a>
               </li>
@@ -1049,8 +1088,8 @@
             </ul>
           </div>
           <div class="col">
-            <span class="h6">Support</span>
-            <ul class="nav flex-column">
+            <p class="span-fix h6">Support</span>
+            <ul class="nav navlink-fix flex-column">
               <li class="nav-item">
                 <a href="#" class="link-fancy link-fancy-light">About us</a>
               </li>
